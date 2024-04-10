@@ -44,12 +44,24 @@
     // TESTIMONIALS slider
     testimonialsSlider = new Swiper('.testimonials__slider', {
         spaceBetween: 20,
-        slidesPerView: 2,
+        slidesPerView: 1,
 
         navigation: {
             nextEl: '.testimonials__button--next',
             prevEl: '.testimonials__button--prev',
-          },
+        },
+        breakpoints: {
+            // when window width is >= 320px
+            701: {
+                slidesPerView: 1.5,
+                spaceBetween: 20
+            },
+            901: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+
+        }
 
 
     });
