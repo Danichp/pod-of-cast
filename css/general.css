@@ -1,0 +1,156 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: -4vh;
+}
+
+.body {
+    color: var(--text-color);
+    font-family: 'Montserrat Alternates', 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    background: var(--color-bg);
+
+}
+
+.body--opened-menu {
+    overflow: hidden;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.main_hero {
+    padding: 64px 0 140px;
+}
+
+.main__about,
+.main__testimonials,
+.main__advantages,
+.main__episodes,
+.main__offer,
+.main__news,
+.main__app {
+    padding: 140px 0;
+}
+
+.hero::after,
+.news::after {
+    content: url('../img/icons/decor/scribble.svg');
+}
+
+.about::after,
+.testimonials::after,
+.advantages::after,
+.episodes::after,
+.offer::after {
+    content: url('../img/icons/decor/scribble-black.svg');
+}
+
+.hero::after,
+.about::after,
+.testimonials::after,
+.advantages::after,
+.episodes::after,
+.offer::after,
+.news::after {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    z-index: 1;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0px 20px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.button {
+    text-transform: uppercase;
+    display: block;
+    padding: 20px 36px;
+    background: var(--text-color);
+    color: var(--color-bg);
+    font-weight: 700;
+    font-size: 14px;
+    border: 2px solid var(--text-color);
+    border-radius: var(--border-radius);
+    box-shadow: 6px 6px 0px 0px #00000040;
+    transition: var(--transition-duration);
+    text-wrap: nowrap;
+}
+
+.button:hover {
+    background: transparent;
+    color: var(--text-color);
+    box-shadow: none;
+}
+
+.title {
+    font-family: 'Montserrat Alternates', 'Montserrat', sans-serif;
+    font-size: 59px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -2%;
+    text-align: center;
+    color: var(--text-color);
+}
+
+
+.bold-text {
+    font-size: 22.65px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: -2%;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(3deg);
+    }
+}
+@keyframes rotateFull {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotateScale {
+    0% {
+        transform: rotate(0) scale(1);
+    }
+
+    100% {
+        transform: rotate(3deg) scale(1.1);
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
